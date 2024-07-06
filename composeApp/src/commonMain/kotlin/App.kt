@@ -14,13 +14,15 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import kmptemplate.composeapp.generated.resources.Res
 import kmptemplate.composeapp.generated.resources.compose_multiplatform
+import org.koin.compose.koinInject
 import viewmodel.KmpViewModel
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
 @Preview
-fun App() {
-    val viewModel = remember { KmpViewModel() }
+fun App(
+    viewModel: KmpViewModel = koinInject(),
+) {
     MaterialTheme {
         var showContent by remember { mutableStateOf(false) }
         Column(

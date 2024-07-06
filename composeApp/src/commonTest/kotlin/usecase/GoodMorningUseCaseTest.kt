@@ -32,7 +32,7 @@ class GoodMorningUseCaseTest : KoinTest {
     fun checkValue() {
         assertEquals(
             "Good Morning",
-            useCase.invoke(),
+            useCase(),
         )
     }
 }

@@ -2,6 +2,7 @@ import org.koin.dsl.module
 import repository.GoodMorningRepository
 import repository.GreetingRepository
 import usecase.GoodMorningUseCase
+import viewmodel.KmpViewModel
 
 val AppModule = module {
     single<GreetingRepository> {
@@ -9,6 +10,14 @@ val AppModule = module {
     }
 
     single<GoodMorningUseCase> {
-        GoodMorningUseCase(get())
+        GoodMorningUseCase(
+            repository = get(),
+        )
+    }
+
+    single<KmpViewModel> {
+        KmpViewModel(
+            useCase = get(),
+        )
     }
 }
