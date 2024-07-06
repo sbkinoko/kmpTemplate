@@ -8,7 +8,7 @@ val AppModule = module {
         GoodMorningRepository()
     }
 
-    single {
+    single<GoodMorningUseCase> {
         GoodMorningUseCase(get())
     }
 }
