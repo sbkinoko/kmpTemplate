@@ -23,6 +23,7 @@ import viewmodel.KmpViewModel
 fun App(
     viewModel: KmpViewModel = koinInject(),
 ) {
+    val state = viewModel.countFlow.collectAsState(0)
     MaterialTheme {
         var showContent by remember { mutableStateOf(false) }
         Column(
@@ -37,6 +38,13 @@ fun App(
                 }
             ) {
                 Text("Click me!")
+            }
+            Button(
+                onClick = {
+                    viewModel.addCount()
+                }
+            ) {
+                Text("Count: ${state.value}")
             }
             AnimatedVisibility(showContent) {
                 val greeting = remember { Greeting().greet() }
