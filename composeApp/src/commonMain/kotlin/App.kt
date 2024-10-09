@@ -39,6 +39,7 @@ fun App(
             ) {
                 Text("Click me!")
             }
+
             Button(
                 onClick = {
                     viewModel.addCount()
@@ -46,6 +47,7 @@ fun App(
             ) {
                 Text("Count: ${state.value}")
             }
+
             AnimatedVisibility(showContent) {
                 val greeting = remember { Greeting().greet() }
                 Column(
