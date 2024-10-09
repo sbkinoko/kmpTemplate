@@ -16,7 +16,7 @@ junit = "4.13.2"
 kotlin = "1.9.22"
 koin = "3.5.0"
 koin-compose = "1.0.4"
-realm="3.0.0"
+realm="1.16.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
