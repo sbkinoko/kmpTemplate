@@ -24,7 +24,7 @@ class CountRepositoryImpl : CountRepository {
             )
         }
 
-    override var count: Int = counter.count
+    override var count: Int = 0
         set(value) {
             field = value
             CoroutineScope(Dispatchers.Default).launch {
@@ -36,4 +36,8 @@ class CountRepositoryImpl : CountRepository {
                 }
             }
         }
+
+    init{
+        count = counter.count
+    }
 }
