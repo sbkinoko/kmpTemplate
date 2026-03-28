@@ -1,5 +1,7 @@
 package repository
 
+import repository.greeting.GoodMorningRepository
+import repository.greeting.GreetingRepository
 import kotlin.test.BeforeTest
 import kotlin.test.Test
 import kotlin.test.assertEquals

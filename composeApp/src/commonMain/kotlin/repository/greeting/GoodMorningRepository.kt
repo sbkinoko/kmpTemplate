@@ -1,4 +1,4 @@
-package repository
+package repository.greeting
 
 class GoodMorningRepository : GreetingRepository {
     override fun greeting(): String {
