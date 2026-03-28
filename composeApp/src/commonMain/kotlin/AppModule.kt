@@ -1,6 +1,6 @@
 import org.koin.dsl.module
-import repository.GoodMorningRepository
-import repository.GreetingRepository
+import repository.greeting.GoodMorningRepository
+import repository.greeting.GreetingRepository
 import usecase.GoodMorningUseCase
 import viewmodel.KmpViewModel
 
