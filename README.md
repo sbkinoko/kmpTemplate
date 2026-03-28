@@ -22,8 +22,6 @@ Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-mu
 ## About
 https://kmp.jetbrains.com/ のウィザードを利用して作成したテンプレです。
 導入済みのライブラリは以下のものです。
-- Realm
-  - データベース
 - Koin
   - DIツール
  
